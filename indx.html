@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شمارش معکوس رمضان</title>
+    <style>
+        body {
+            font-family: dana;
+            text-align: center;
+            background-color: #0e353d;
+        
+            color: #fff;
+            direction: rtl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            color: rgb(255, 174, 0);
+
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 19px;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: black;
+        }
+        .unit {
+            text-align: center;
+            font-family: dana;
+            margin: 20px;
+            box-shadow: 0 0 30px rgb(255, 179, 15);
+            border-radius: 100%;
+            width: 130px;
+            height: 130px;
+            line-height: 60px;
+            margin-top: 30%;
+            background-color: #ffffff;
+            color: black;
+
+        }
+        .value {
+            font-size: 30px;
+            color: #000000;
+            position: relative;
+            top: 30px;
+        }
+
+        .eid p{
+            width: 100%;
+            height: 40vh;
+            color: orange;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>رمضان مبارک!</h1>
+    <div class="countdown">
+        <div class="unit">
+            <span class="value" id="days"></span>
+            <div>روز</div>
+            <div class="eid"><p>تا عید سعید الفطر</p></div>
+        </div>
+     
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const ramadanStart = new Date("March 31, 2025 01:30:00").getTime();
+            const now = new Date().getTime();
+            const difference = ramadanStart - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>

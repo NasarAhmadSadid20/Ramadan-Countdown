@@ -1,0 +1,60 @@
+body {
+  /* background-position: center;
+  background-size: cover; */
+  font-family: dana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(12, 48, 66);
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+}
+
+.calendar-container {
+  text-align: center;
+  height: 50%;
+  width: 200px;
+  padding: 20px;
+}
+h1 {
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: B Titr, serif;
+  color: rgb(255, 255, 255);
+  color: orange;
+}
+#contdown {
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center; */
+  color: rgb(255, 255, 255);
+  /* font-size: 4rem; */
+}
+.time-box {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+
+}
+.time-box span {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+
+}
+.time-box p {
+  margin: 2px 0 0 0;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 35px;
+  }
+  background-image{
+    width: 100%;
+
+  }
+}
